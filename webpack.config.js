@@ -13,6 +13,7 @@ module.exports = {
   bail: bail,
   entry: {
     main: path.resolve(__dirname, './source/assets/javascripts/site.js'),
+    main: path.resolve(__dirname, './source/assets/stylesheets/site.scss'),
   },
 
   output: {

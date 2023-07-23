@@ -48,12 +48,12 @@ page '/*.json', layout: false
 page '/*.txt',  layout: false
 
 # Load and activate all components
-Dir['./components/**/*.rb'].each { |file| load file }
-Pathname.new('./components').children.each do |entry|
-  next unless entry.directory?
+# Dir['./components/**/*.rb'].each { |file| load file }
+# Pathname.new('./components').children.each do |entry|
+#   next unless entry.directory?
 
-  activate "#{entry.basename}_component".to_sym
-end
+#   activate "#{entry.basename}_component".to_sym
+# end
 
 # Development-specific configuration
 configure :development do
