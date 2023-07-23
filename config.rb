@@ -1,46 +1,74 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
+# frozen_string_literal: true
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+# General config
+# http://localhost:4567/__middleman
+
+# Set root_locale
+root_locale = :en
+
+# Accessible as `root_locale` in helpers and `config[:root_locale]` in templates
+set :root_locale, root_locale
+
+# Activate i18n for root locale
+activate :i18n, mount_at_root: root_locale, langs: %i[en]
+
+# Load Sass from node_modules
+config[:sass_assets_paths] << File.join(root, 'node_modules')
+
+# Set assets directories
+set :css_dir,    'assets/stylesheets'
+set :fonts_dir,  'assets/fonts'
+set :images_dir, 'assets/images'
+set :js_dir,     'assets/javascripts'
+
+# Handled by Webpack
+ignore File.join(config[:js_dir], '*')
+ignore File.join(config[:css_dir], '*')
+ignore File.join(config[:fonts_dir], '*')
+
+# Webpack
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? 'yarn run build' : 'yarn run start',
+         source: 'dist',
+         latency: 1
+
+activate :dotenv
+activate :directory_indexes
+activate :inline_svg
+
+# Use kramdown for markdown
+set :markdown_engine, :kramdown
 
 # Layouts
-# https://middlemanapp.com/basics/layouts/
+# https://middlemanapp.com/basics/layouts
 
-# Per-page layout changes
-page '/*.xml', layout: false
+page '/*.xml',  layout: false
 page '/*.json', layout: false
-page '/*.txt', layout: false
+page '/*.txt',  layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+# Load and activate all components
+Dir['./components/**/*.rb'].each { |file| load file }
+Pathname.new('./components').children.each do |entry|
+  next unless entry.directory?
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+  activate "#{entry.basename}_component".to_sym
+end
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+# Development-specific configuration
+configure :development do
+  set      :debug_assets, true
+  activate :livereload
+end
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+configure :build do
+  set      :relative_links, true
+  activate :asset_hash
+  activate :gzip
+  activate :minify_html, remove_input_attributes: false
+end
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+ready do
+  proxy '_headers', 'headers', ignore: true
+end
 
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
