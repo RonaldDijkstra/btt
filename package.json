@@ -1,8 +1,8 @@
 {
-    "name": "btt",
+    "name": "folkingebrew",
     "version": "1.0.0",
-    "description": "Static website for BTT",
-    "repository": "https://github.com/RonaldDijkstra/btt/",
+    "description": "Static website for Folkingebrew, Modern Craft Beer from Groningen since 2017",
+    "repository": "https://github.com/RonaldDijkstra/folkingebrew/",
     "author": "Ronald Dijkstra",
     "license": "MIT",
     "browserslist": "last 4 versions",
@@ -38,8 +38,10 @@
     },
     "dependencies": {
       "@tailwindcss/forms": "^0.5.0",
+      "@tailwindcss/typography": "^0.5.2",
       "autoprefixer": "^10.4.4",
       "cssnano": "^5.1.7",
+      "js-cookie": "^3.0.1",
       "tailwindcss": "^3.0.24",
       "terser-webpack-plugin": "^5.3.1",
       "what-input": "^5.2.10"

@@ -7,10 +7,15 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
+    <%# Getting the main stylesheet generated from webpack. Using a regex because of asset hashes %>
+    <% sitemap.resources.select {|resource| resource.path =~ /^(main).*$/}.each do |resource| %>
+      <% if resource.path =~ /\.(css)/ %>
+        <link rel="stylesheet" type="text/css" href="/<%= resource.path %>">
+      <% end %>
+    <% end %>
     <%= javascript_include_tag "site" %>
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen font-sans">
     <%= yield %>
   </body>
 </html>
