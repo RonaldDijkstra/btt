@@ -1,21 +1,27 @@
 <!doctype html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= content_for?(:page_title) ? yield_content(:page_title) : page_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+    <meta name="robots" content="<%= robots %>">
     <%# Getting the main stylesheet generated from webpack. Using a regex because of asset hashes %>
     <% sitemap.resources.select {|resource| resource.path =~ /^(main).*$/}.each do |resource| %>
       <% if resource.path =~ /\.(css)/ %>
         <link rel="stylesheet" type="text/css" href="/<%= resource.path %>">
       <% end %>
     <% end %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body class="bg-black flex flex-col min-h-screen font-sans">
     <%= yield %>
+
+    <% sitemap.resources.select {|resource| resource.path =~ /^(main).*$/}.each do |resource| %>
+      <% if resource.path =~ /\.(js)/ %>
+        <%= javascript_include_tag resource.path %>
+      <% end %>
+    <% end %>
   </body>
 </html>
