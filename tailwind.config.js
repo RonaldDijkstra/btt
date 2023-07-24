@@ -13,6 +13,7 @@ module.exports = {
       white: colors.white,
       black: colors.black,
       neutral: colors.neutral,
+      gray: colors.gray,
     },
     // extend: {
     //   fontFamily: {
