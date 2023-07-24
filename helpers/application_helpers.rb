@@ -53,4 +53,9 @@ module ApplicationHelpers
   def robots
     current_page.data.robots || 'noydir,noodp,index,follow'
   end
+
+  # Get full url
+  def full_url(url)
+    URI.join(base_url, url).to_s
+  end
 end
