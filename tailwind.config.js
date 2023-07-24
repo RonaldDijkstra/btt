@@ -12,7 +12,7 @@ module.exports = {
       transparent: 'transparent',
       white: colors.white,
       black: colors.black,
-      neutral: colors.trueGray,
+      neutral: colors.neutral,
     },
     // extend: {
     //   fontFamily: {
