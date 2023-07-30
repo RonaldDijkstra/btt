@@ -49,7 +49,31 @@
   </div>
 </section>
 <section id="contactForm" class="min-h-screen bg-white flex flex-col justify-center items-center">
-  <h2 class="text-black text-xl">Contact Form</h2>
+  <div class="px-6 max-w-md w-full">
+    <h2 class="text-black text-xl w-full mb-3 font-bold">Contact Form</h2>
+    <form name="contact" class="w-full" method="POST" data-netlify="true" netlify-honeypot="honeypot" action="/thanks/">
+      <fieldset class="w-full m-auto">
+        <label class="hidden">Don’t fill this out if you're human: <input name="honeypot" /></label>
+        <label for="name" class="block font-bold">
+          Name
+        </label>
+        <input type="text" name="naam" id="name" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700" required>
+        <label for="email" class="block font-bold">
+          Email Address
+        </label>
+        <input type="email" name="email" id="email" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700" required>
+        <label for="email" class="block font-bold">
+          Phone Number
+        </label>
+        <input type="tel" name="phone" id="phone" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700">
+        <label for="message" class="block font-bold">
+          Message
+        </label>
+        <textarea name="Message" id="message" rows="6" class="block mb-3 w-full focus:border-blue-700 focus:ring-blue-700"></textarea>
+        <button type="submit" class="bg-blue-700 border-blue-700 text-white hover:bg-blue-900 hover:border-blue-900 px-6 py-2 h-auto font-medium transition-all border-2 border-solid">Send</button>
+      </fieldset>
+    </form>
+  </div>
 </section>
 <footer class="bg-neutral-900 flex flex-col justify-center items-center py-12 sm:py-24 px-6">
   <div class="max-w-4xl m-auto px-6 sm:flex w-full  text-white">
