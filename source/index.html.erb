@@ -1,25 +1,28 @@
 <section class="px-6 h-screen flex flex-col justify-center items-center bg-blend-soft-light bg-neutral-700 bg-cover bg-center bg-no-repeat" style="background-image: url(<%= asset_url "assets/images/bastian-teeuwen-tattoo-01.jpg" %>)">
   <div class="text-center text-white">
     <!-- Logo ? -->
-    <h1 class="text-2xl text-center">Bastian Teeuwen Tattoo</h1>
-    <h2 class="text-xl">Tagline</h2>
+    <h1 class="text-3xl xl:text-4xl text-center font-bold">Welcome to Bastian Teeuwen Tattoo</h1>
+    <h2 class="text-xl">Fine Line Tattoos from the heart of Groningen</h2>
   </div>
 </section>
 
-<section class="h-screen bg-white flex flex-col justify-center items-center">
-  <div class="max-w-4xl px-6 sm:columns-2">
-    <h2 class="text-black text-xl font-medium mb-3">Welcome to the brand new tattoo shop of Bastian Teeuwen in the heart of Groningen!</h2>
-    <p class="text-black mb-3">After spending years honing my craft at a renowned tattoo parlor, I finally decided to take the leap and establish my own artistic space. I'm Bastian Teeuwen, and I couldn't be prouder to invite you to experience the fusion of passion and craftsmanship in my studio.</p>
+<section class="min-h-screen bg-white flex flex-col justify-center items-center py-24 px-6">
+  <div class="max-w-2xl px-6">
+    <div class="flex justify-center mb-6">
+      <%= image_tag("logo-bastian-teeuwen-tattoo.svg", width: "100", class: "block", alt: "Logo Bastian Teeuwen Tattoo") %>
+    </div>
+    <h2 class="text-black text-3xl font-bold mb-3">Welcome to the brand new tattoo shop of Bastian Teeuwen in the heart of Groningen!</h2>
+    <p class="text-black mb-3">After spending years honing my craft at a renowned tattoo parlor, I finally decided to take the leap and establish my own artistic space. I'm Bastian Teeuwen, and I couldn't be prouder to invite you in my studio.</p>
     <p class="text-black mb-3">
       At my shop, personal attention is the cornerstone of every tattoo experience. I'm dedicated to making your time here truly unforgettable. Whether you're looking for a completely unique creation or want to customize an existing design to match your preferences, I'm here to assist you with my expertise and artistic vision.
     </p>
-    <p class="text-black font-medium">Step into the enchanting world of tattoo art where ideas come to life on your skin!</p>
+    <p class="text-black font-bold">For questions or appointments <a href="https://www.instagram.com/bastianteeuwen/" class="text-blue-700 underline hover:no-underline">DM on Instagram</a> or <a href="#contactForm" class="text-blue-700 underline hover:no-underline">email.</p>
   </div>
 </section>
 
 <section class="min-h-screen bg-neutral-900 flex flex-col py-24 px-6">
   <div class="max-w-7xl m-auto">
-    <h2 class="text-white text-4xl text-center mb-12">Work</h2>
+    <h2 class="text-white text-4xl text-center mb-12 font-bold">Gallery</h2>
     <div class="columns-1 sm:columns-2 md:columns-3 gap-8 mb-12">
       <div class="relative aspect-w-3 aspect-h-4 mb-8">
         <%= image_tag('work/rose-sleeve.jpg', class: "w-full object-cover rounded-lg") %>
@@ -45,7 +48,49 @@
     </div>
   </div>
 </section>
-
-<section class="h-screen bg-white flex flex-col justify-center items-center">
+<section id="contactForm" class="min-h-screen bg-white flex flex-col justify-center items-center">
   <h2 class="text-black text-xl">Contact Form</h2>
 </section>
+<footer class="bg-neutral-900 flex flex-col justify-center items-center py-12 sm:py-24 px-6">
+  <div class="max-w-4xl m-auto px-6 sm:flex w-full  text-white">
+    <div class="w-full sm:w-1/2">
+      <h2 class="text-white text-xl font-bold mb-3">Opening Hours</h2>
+      <div class="mb-6 sm:mb-0">
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Monday</div>
+          <div>Closed</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Tuesday</div>
+          <div>Closed</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Wednesday</div>
+          <div>12:00-19:00</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Thursday</div>
+          <div>12:00-19:00</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Friday</div>
+          <div>12:00-19:00</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Saturday</div>
+          <div>12:00-19:00</div>
+        </div>
+        <div class="flex flex-row">
+          <div class="font-bold w-32">Sunday</div>
+          <div>12:00-19:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/2">
+      <h2 class="text-white text-xl font-bold mb-3">Address</h2>
+      <address class="not-italic mb-3 text-white">Steentilstraat 18<br>
+        9711 GM Groningen</address>
+        <a href="https://www.google.com/maps/dir//Steentilstraat+18,+9711+GM+Groningen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47c9cd56f52e51a5:0x17acd9ce927174de?sa=X&ved=2ahUKEwji6ILGlreAAxUFtKQKHY2wCWEQwwV6BAgYEAA&ved=2ahUKEwji6ILGlreAAxUFtKQKHY2wCWEQwwV6BAgaEAQ" class="text-white underline hover:no-underline" target="_blank">Directions</a>
+    </div>
+  </div>
+</footer>
