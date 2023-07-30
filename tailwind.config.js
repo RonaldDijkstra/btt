@@ -16,11 +16,9 @@ module.exports = {
       gray: colors.gray,
       blue: colors.blue,
     },
-    // extend: {
-    //   fontFamily: {
-    //     'sans': ['Open Sans', 'sans-serif']
-    //   },
-    // }
+    fontFamily: {
+      'heading': ['Miltonian Tattoo', 'sans-serif']
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -1,7 +1,7 @@
 <section class="px-6 h-screen flex flex-col justify-center items-center bg-blend-soft-light bg-neutral-700 bg-cover bg-center bg-no-repeat" style="background-image: url(<%= asset_url "assets/images/bastian-teeuwen-tattoo-01.jpg" %>)">
   <div class="text-center text-white">
     <!-- Logo ? -->
-    <h1 class="text-3xl xl:text-4xl text-center font-bold">Welcome to Bastian Teeuwen Tattoo</h1>
+    <h1 class="text-3xl xl:text-4xl text-center font-bold font-heading">Welcome to Bastian Teeuwen Tattoo</h1>
     <h2 class="text-xl">Fine Line Tattoos from the heart of Groningen</h2>
   </div>
 </section>
@@ -11,7 +11,7 @@
     <div class="flex justify-center mb-6">
       <%= image_tag("logo-bastian-teeuwen-tattoo.svg", width: "100", class: "block", alt: "Logo Bastian Teeuwen Tattoo") %>
     </div>
-    <h2 class="text-black text-3xl font-bold mb-3">Welcome to the brand new tattoo shop of Bastian Teeuwen in the heart of Groningen!</h2>
+    <h2 class="text-black text-3xl font-bold mb-3 font-heading">Welcome to the brand new tattoo shop of Bastian Teeuwen in the heart of Groningen!</h2>
     <p class="text-black mb-3">After spending years honing my craft at a renowned tattoo parlor, I finally decided to take the leap and establish my own artistic space. I'm Bastian Teeuwen, and I couldn't be prouder to invite you in my studio.</p>
     <p class="text-black mb-3">
       At my shop, personal attention is the cornerstone of every tattoo experience. I'm dedicated to making your time here truly unforgettable. Whether you're looking for a completely unique creation or want to customize an existing design to match your preferences, I'm here to assist you with my expertise and artistic vision.
@@ -22,7 +22,7 @@
 
 <section class="min-h-screen bg-neutral-900 flex flex-col py-24 px-6">
   <div class="max-w-7xl m-auto">
-    <h2 class="text-white text-4xl text-center mb-12 font-bold">Gallery</h2>
+    <h2 class="text-white text-4xl text-center mb-12 font-bold font-heading">Gallery</h2>
     <div class="columns-1 sm:columns-2 md:columns-3 gap-8 mb-12">
       <div class="relative aspect-w-3 aspect-h-4 mb-8">
         <%= image_tag('work/rose-sleeve.jpg', class: "w-full object-cover rounded-lg") %>
@@ -44,33 +44,33 @@
       </div>
     </div>
     <div class="text-center">
-      <a href="https://www.instagram.com/bastianteeuwen/" class="text-white text-xl hover:text-black border border-white hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" target="_blank">More on Instagram</a>
+      <a href="https://www.instagram.com/bastianteeuwen/" class="text-white text-xl hover:text-black border border-white hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg px-5 py-2.5 text-center font-heading" target="_blank">More on Instagram</a>
     </div>
   </div>
 </section>
 <section id="contactForm" class="min-h-screen bg-white flex flex-col justify-center items-center">
   <div class="px-6 max-w-md w-full">
-    <h2 class="text-black text-xl w-full mb-3 font-bold">Contact Form</h2>
+    <h2 class="text-black text-2xl w-full mb-3 font-bold font-heading">Contact Form</h2>
     <form name="contact" class="w-full" method="POST" data-netlify="true" netlify-honeypot="honeypot" action="/thanks/">
       <fieldset class="w-full m-auto">
         <label class="hidden">Don’t fill this out if you're human: <input name="honeypot" /></label>
         <label for="name" class="block font-bold">
           Name
         </label>
-        <input type="text" name="naam" id="name" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700" required>
+        <input type="text" name="naam" id="name" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700 rounded-lg" required>
         <label for="email" class="block font-bold">
           Email Address
         </label>
-        <input type="email" name="email" id="email" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700" required>
+        <input type="email" name="email" id="email" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700 rounded-lg" required>
         <label for="email" class="block font-bold">
           Phone Number
         </label>
-        <input type="tel" name="phone" id="phone" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700">
+        <input type="tel" name="phone" id="phone" class="mb-3 w-full focus:border-blue-700 focus:ring-blue-700 rounded-lg">
         <label for="message" class="block font-bold">
           Message
         </label>
-        <textarea name="Message" id="message" rows="6" class="block mb-3 w-full focus:border-blue-700 focus:ring-blue-700"></textarea>
-        <button type="submit" class="bg-blue-700 border-blue-700 text-white hover:bg-blue-900 hover:border-blue-900 px-6 py-2 h-auto font-medium transition-all border-2 border-solid">Send</button>
+        <textarea name="Message" id="message" rows="6" class="block mb-3 w-full focus:border-blue-700 focus:ring-blue-700 rounded-lg"></textarea>
+        <button type="submit" class="font-heading bg-blue-700 border-blue-700 text-white rounded-lg hover:bg-blue-900 hover:border-blue-900 px-6 py-2 h-auto font-medium transition-all border-2 border-solid">Send</button>
       </fieldset>
     </form>
   </div>
@@ -78,7 +78,7 @@
 <footer class="bg-neutral-900 flex flex-col justify-center items-center py-12 sm:py-24 px-6">
   <div class="max-w-4xl m-auto px-6 sm:flex w-full  text-white">
     <div class="w-full sm:w-1/2">
-      <h2 class="text-white text-xl font-bold mb-3">Opening Hours</h2>
+      <h2 class="text-white text-xl font-bold mb-3 font-heading">Opening Hours</h2>
       <div class="mb-6 sm:mb-0">
         <div class="flex flex-row">
           <div class="font-bold w-32">Monday</div>
@@ -111,7 +111,7 @@
       </div>
     </div>
     <div class="w-full sm:w-1/2">
-      <h2 class="text-white text-xl font-bold mb-3">Address</h2>
+      <h2 class="text-white text-xl font-bold mb-3 font-heading">Address</h2>
       <address class="not-italic mb-3 text-white">Steentilstraat 18<br>
         9711 GM Groningen</address>
         <a href="https://www.google.com/maps/dir//Steentilstraat+18,+9711+GM+Groningen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47c9cd56f52e51a5:0x17acd9ce927174de?sa=X&ved=2ahUKEwji6ILGlreAAxUFtKQKHY2wCWEQwwV6BAgYEAA&ved=2ahUKEwji6ILGlreAAxUFtKQKHY2wCWEQwwV6BAgaEAQ" class="text-white underline hover:no-underline" target="_blank">Directions</a>
