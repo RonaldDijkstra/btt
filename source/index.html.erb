@@ -5,7 +5,6 @@
     <h2 class="text-xl">Fine Line Tattoos from the heart of Groningen</h2>
   </div>
 </section>
-
 <section class="min-h-screen bg-white flex flex-col justify-center items-center py-24 px-6">
   <div class="max-w-2xl px-6">
     <div class="flex justify-center mb-6">
@@ -16,7 +15,7 @@
     <p class="text-black mb-3">
       At my shop, personal attention is the cornerstone of every tattoo experience. I'm dedicated to making your time here truly unforgettable. Whether you're looking for a completely unique creation or want to customize an existing design to match your preferences, I'm here to assist you with my expertise and artistic vision.
     </p>
-    <p class="text-black font-bold">For questions or appointments <a href="https://www.instagram.com/bastianteeuwen/" class="text-blue-700 underline hover:no-underline">DM on Instagram</a> or <a href="#contactForm" class="text-blue-700 underline hover:no-underline">email.</p>
+    <p class="text-black font-bold">For questions or appointments <a href="https://www.instagram.com/bastianteeuwen/" class="text-blue-700 underline hover:no-underline" rel="nofollow noopener noreferrer" >DM on Instagram</a> or <a id="scrollButton" href="#contactForm" class="text-blue-700 underline hover:no-underline">email</a>.</p>
   </div>
 </section>
 <section class="min-h-screen bg-neutral-900 flex flex-col py-24 px-6">
@@ -24,22 +23,22 @@
     <h2 class="text-white text-4xl text-center mb-12 font-bold font-heading">Gallery</h2>
     <div class="columns-1 sm:columns-2 md:columns-3 gap-8 mb-12">
       <div class="relative aspect-w-3 aspect-h-4 mb-8">
-        <%= image_tag('work/rose-sleeve.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/rose-sleeve.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Sleeve by Bastian Teeuwen") %>
       </div>
       <div class="relative aspect-w-1 aspect-h-1 mb-8">
-        <%= image_tag('work/sailor-jerry.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/sailor-jerry.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Sailor Jerry by Bastian Teeuwen") %>
       </div>
       <div class="relative aspect-w-1 aspect-h-1 mb-8">
-        <%= image_tag('work/pirate-girl.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/pirate-girl.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Pirate Girl by Bastian Teeuwen") %>
       </div>
       <div class="relative aspect-w-1 aspect-h-1 mb-8">
-        <%= image_tag('work/boat.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/boat.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Boat by Bastian Teeuwen") %>
       </div>
       <div class="relative aspect-w-1 aspect-h-1 mb-8">
-        <%= image_tag('work/moeke.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/moeke.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Moeke by Bastian Teeuwen") %>
       </div>
       <div class="relative aspect-w-3 aspect-h-4 mb-8">
-        <%= image_tag('work/jesus-vomits-squid.jpg', class: "w-full object-cover rounded-lg") %>
+        <%= image_tag('work/jesus-vomits-squid.jpg', class: "w-full object-cover rounded-lg", alt: "Tattoo Jesus vomits a Squid by Bastian Teeuwen") %>
       </div>
     </div>
     <div class="text-center">
@@ -75,19 +74,8 @@
   </div>
 </section>
 <footer class="bg-neutral-900 flex flex-col justify-center items-center py-12 sm:py-24 px-6">
-  <div class="max-w-4xl m-auto sm:flex w-full text-white">
-    <div class="w-full sm:w-1/3">
-      <h2 class="text-white text-xl font-bold mb-3 font-heading">Follow us</h2>
-      <div class="flex items-center mb-3">
-        <a href="https://www.instagram.com/bastianteeuwen/" class="mr-3 transition-all w-7 h-7 flex items-center" rel="nofollow noopener noreferrer" target="_blank">
-          <%= inline_svg "icons/instagram.svg" %>
-        </a>
-        <a href="https://www.facebook.com/bastianteeuwentattoo" class="mr-3 transition-all w-7 h-7 flex items-center" rel="nofollow noopener noreferrer" target="_blank">
-          <%= inline_svg "icons/facebook.svg" %>
-        </a>
-      </div>
-    </div>
-    <div class="w-full sm:w-1/3">
+  <div class="max-w-4xl m-auto sm:flex sm:justify-center w-full text-white">
+    <div class="w-full sm:w-2/5 sm:mr-3">
       <h2 class="text-white text-xl font-bold mb-3 font-heading">Opening Hours</h2>
       <div class="mb-6 sm:mb-0">
         <div class="flex flex-row">
@@ -120,11 +108,22 @@
         </div>
       </div>
     </div>
-    <div class="w-full sm:w-1/3">
+    <div class="w-full sm:w-2/5 mb-6 sm:mb-0">
       <h2 class="text-white text-xl font-bold mb-3 font-heading">Address</h2>
       <address class="not-italic mb-3 text-white">Steentilstraat 18<br>
         9711 GM Groningen</address>
         <a href="https://goo.gl/maps/piFnt9wgoS4aetcD6" class="text-white underline hover:no-underline" target="_blank">Directions</a>
+    </div>
+    <div class="w-full sm:w-1/5 sm:ml-3">
+      <h2 class="text-white text-xl font-bold mb-3 font-heading">Follow us</h2>
+      <div class="flex items-center mb-3">
+        <a href="https://www.instagram.com/bastianteeuwen/" class="mr-3 transition-all w-7 h-7 flex items-center" rel="nofollow noopener noreferrer" target="_blank">
+          <%= inline_svg "icons/instagram.svg" %>
+        </a>
+        <a href="https://www.facebook.com/bastianteeuwentattoo" class="mr-3 transition-all w-7 h-7 flex items-center" rel="nofollow noopener noreferrer" target="_blank">
+          <%= inline_svg "icons/facebook.svg" %>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

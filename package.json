@@ -1,8 +1,8 @@
 {
-    "name": "folkingebrew",
+    "name": "bastian-teeuwen-tattoo",
     "version": "1.0.0",
-    "description": "Static website for Folkingebrew, Modern Craft Beer from Groningen since 2017",
-    "repository": "https://github.com/RonaldDijkstra/folkingebrew/",
+    "description": "Tattoo Studio in Groningen",
+    "repository": "https://github.com/RonaldDijkstra/btt/",
     "author": "Ronald Dijkstra",
     "license": "MIT",
     "browserslist": "last 4 versions",

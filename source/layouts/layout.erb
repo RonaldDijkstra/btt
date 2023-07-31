@@ -18,7 +18,7 @@
   <body class="bg-black flex flex-col min-h-screen font-sans">
     <%= yield %>
 
-    <% sitemap.resources.select {|resource| resource.path =~ /^(main).*$/}.each do |resource| %>
+    <% sitemap.resources.select {|resource| resource.path =~ /^(index).*$/}.each do |resource| %>
       <% if resource.path =~ /\.(js)/ %>
         <%= javascript_include_tag resource.path %>
       <% end %>
